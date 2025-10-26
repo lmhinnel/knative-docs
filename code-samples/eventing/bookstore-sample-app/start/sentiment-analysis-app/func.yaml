@@ -1,0 +1,14 @@
+# $schema: https://raw.githubusercontent.com/knative/func/d04ff0a3/schema/func_yaml-schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/knative/func/d04ff0a3/schema/func_yaml-schema.json
+specVersion: 0.36.0
+name: sentiment-analysis-app
+runtime: python
+registry: docker.io/lmhinnel
+namespace: default
+created: 2025-10-24T15:43:31.316124555+07:00
+invoke: cloudevent
+build:
+  builder: s2i
+deploy:
+  namespace: default
+  image: index.docker.io/lmhinnel/sentiment-analysis-app@sha256:31edb07632e6e1947f077b89257df23fe54eb2734b2a82acb2c3189176026c31

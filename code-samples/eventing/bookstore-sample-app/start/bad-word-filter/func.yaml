@@ -1,0 +1,14 @@
+# $schema: https://raw.githubusercontent.com/knative/func/d04ff0a3/schema/func_yaml-schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/knative/func/d04ff0a3/schema/func_yaml-schema.json
+specVersion: 0.36.0
+name: bad-word-filter
+runtime: python
+registry: docker.io/lmhinnel
+namespace: default
+created: 2025-10-24T15:43:20.792134748+07:00
+invoke: cloudevent
+build:
+  builder: s2i
+deploy:
+  namespace: default
+  image: index.docker.io/lmhinnel/bad-word-filter@sha256:f7aa731e5e97a70952fd46fdae8309982587a2e86b76b2465527efd6f30ad732
